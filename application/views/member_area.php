@@ -132,7 +132,7 @@
                                      </table>
                                 <div style="width:400px;height:440px;overflow:scroll;">
                                     <div class="table-responsive">
-                                        <table class="table table-bordered table-hover table-striped" id="stockInfo">
+                                        <table class="table table-bordered table-hover table-striped" id="stockInfo" style="cursor: pointer">
                                         </table>
                                     </div>
                                 </div>

@@ -5,7 +5,7 @@ var actualUrlPrefix = (testingEnvironment ? serverPrefix : urlPrefix);
 
 
 
-//dynamic table for the stock list
+//create table for the stock list
 $.ajax({
   type: "GET",
   url: actualUrlPrefix+ "instruments",
@@ -36,7 +36,7 @@ $.ajax({
 });
 //create table for the stock list
 
-
+//dynamic update the live price
 setInterval(function () {
   $.ajax({
     type: "GET",
