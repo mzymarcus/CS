@@ -1,25 +1,33 @@
 var username = "Marcus";
 var urlPrefix = "http://128.199.213.71:9292/";
 var serverPrefix = "http://localhost/cs/index.php/"; 
-var ric = "0002.HK";
-var quantity = 100;
+
 var brokerId = "cs";
 var type = "Market";
 var transactionInterval;
 var transactionDone;
 
 var testPrice = 6;
+
 $(document).ready(function() {
     $("#buyButton").click( function() {
         // var price = document.getElementById("buyPrice").value;
         console.log("clicked");
         var price = testPrice;
+        var ric = "0002.HK";
+        var quantity = 100;
+
+
         checkMarcketPrice({price: price, ric: ric, isBuying: true, quantity: quantity, brokerId: brokerId, type: type});
     });
 
     $("#sellButton").click( function() {
         // var price = document.getElementById("sellPrice").value;
         var price = testPrice;
+        var ric = "0002.HK";
+        var quantity = 100;
+
+
         checkMarcketPrice({price: price, ric: ric, isBuying: true});
     });
 });
