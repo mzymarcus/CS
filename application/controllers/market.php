@@ -28,23 +28,4 @@ class Member_area extends CI_Controller {
         $this->load->view('stocks_realtime');
         $this->load->view('stocks_buy');
     }
-
-
-    public function instruments(){
-        $ric1 = array("ric" => "0002.HK", "name" => "CHEUNG KONG HOLDINGS LTD", "closePrice" => 135.2, "livePrice" => rand(5, 15));
-        $ric2 = array("ric" => "0003.HK", "name" => "KONG HOLDINGS LTD", "closePrice" => 35.2, "livePrice" => rand(15, 35));
-        $arr = array($ric1, $ric2);    
-        //add the header here
-        header('Content-Type: application/json');
-        echo json_encode( $arr );
-    }
-
-    public function instrument(){
-        $arr = array("ric" => "0002.HK", "name" => "CHEUNG KONG HOLDINGS LTD", "closePrice" => 135.2, "livePrice" => rand(5, 15));    
-        //add the header here
-        header('Content-Type: application/json');
-        echo json_encode( $arr );
-    }
-
-    
 }
