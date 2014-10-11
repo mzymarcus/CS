@@ -7,6 +7,9 @@ var urlPrefix = "http://128.199.213.71:9292/";
 var serverPrefix = "http://localhost/cs/index.php/member_area/"; 
 var actualUrlPrefix = (testingEnvironment ? serverPrefix : urlPrefix);
 
+var selectedRIC = "0002.HK";
+var refresh = false;
+
 // create chart
 AmCharts.ready(function() {
     // SERIAL CHART    
@@ -66,24 +69,22 @@ AmCharts.ready(function() {
     // WRITE
     chart.write("chartdiv");
     setInterval(function () {
-
-        // chart.dataProvider.shift();
+        if (refresh){
+            chart.dataProvider = [];
+            refresh = false;
+        };
         $.ajax({
 	      type: "GET",
-		  url: actualUrlPrefix + "instrument/0002.HK",
+		  url: actualUrlPrefix + "instrument/"+ selectedRIC,
 		  crossDomain : true,
 		  success: function(data){
 		  	var date = new Date();
 		  	var response = $.parseJSON(data);
-		  	// console.log(response);
-
         	chart.dataProvider.push({
             	date: date,
             	visits: response.livePrice
         	});
         	chart.validateData();
-        	// console.log(JSON.stringify(chart.dataProvider));
-
 		  },
 		});
     }, 1000);
