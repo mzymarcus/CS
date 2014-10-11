@@ -80,6 +80,8 @@ AmCharts.ready(function() {
 		  success: function(data){
 		  	var date = new Date();
 		  	var response = $.parseJSON(data);
+            if (chart.dataProvider.length > 25) 
+                chart.dataProvider.shift();
         	chart.dataProvider.push({
             	date: date,
             	visits: response.livePrice

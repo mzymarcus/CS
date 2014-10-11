@@ -102,7 +102,7 @@
                         <!-- /.panel-heading -->
                         <div class="buyOrSell">
                             <row>
-                                    <button class="center">buy</button>
+                                    <button class="center" id ="buyButton">buy</button>
                                     <button>sell</button>
                             </row>
                         </div>
@@ -152,12 +152,13 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="<?= base_url() ?>js/bootstrap.min.js"></script>
     <!-- Javascript for cs competition-->
-    <script src="<?= base_url() ?>js/cs-modification.js"></script>
     <script src="<?= base_url() ?>js/amcharts.js"></script>
     <script src="<?= base_url() ?>js/serial.js"></script>
     <script src="<?= base_url() ?>js/none.js"></script>
     <script src="<?= base_url() ?>js/amstock.js"></script>
     <script src="<?= base_url() ?>js/stock_realtime.js"></script>
+    <script src="<?= base_url() ?>js/transaction.js"></script>
+    <script src="<?= base_url() ?>js/cs-modification.js"></script>
 </body>
 
 </html>
