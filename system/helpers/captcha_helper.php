@@ -6,7 +6,7 @@
  *
  * @package		CodeIgniter
  * @author		ExpressionEngine Dev Team
- * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc.
+ * @copyright	Copyright (c) 2008 - 2011, EllisLab, Inc.
  * @license		http://codeigniter.com/user_guide/license.html
  * @link		http://codeigniter.com
  * @since		Version 1.0
@@ -111,7 +111,7 @@ if ( ! function_exists('create_captcha'))
 			$pool = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 			$str = '';
-			for ($i = 0; $i < 8; $i++)
+			for ($i = 0; $i < 6; $i++)
 			{
 				$str .= substr($pool, mt_rand(0, strlen($pool) -1), 1);
 			}
@@ -126,6 +126,7 @@ if ( ! function_exists('create_captcha'))
 		$length	= strlen($word);
 		$angle	= ($length >= 6) ? rand(-($length-6), ($length-6)) : 0;
 		$x_axis	= rand(6, (360/$length)-16);
+
 		$y_axis = ($angle >= 0 ) ? rand($img_height, $img_width) : rand(6, $img_height);
 
 		// -----------------------------------
@@ -164,6 +165,7 @@ if ( ! function_exists('create_captcha'))
 
 		$theta		= 1;
 		$thetac		= 7;
+//		$radius		= 16;
 		$radius		= 16;
 		$circles	= 20;
 		$points		= 32;
