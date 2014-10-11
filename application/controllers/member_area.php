@@ -19,4 +19,13 @@ class Member_area extends CI_Controller {
             $this->load->view('_output_html', $data);
         }
     }
+
+
+
+
+
+    function realtime(){
+        $this->load->view('stocks_realtime');
+        $this->load->view('stocks_buy');
+    }
 }
