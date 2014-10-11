@@ -1,7 +1,14 @@
+var testingEnvironment = true;
+var urlPrefix = "http://128.199.213.71:9292/";
+var serverPrefix = "http://localhost/cs/member_area/"; 
+var actualUrlPrefix = (testingEnvironment ? serverPrefix : urlPrefix);
+
+
+
 //dynamic table for the stock list
 $.ajax({
-      type: "GET",
-  url: "http://128.199.213.71:9292/instruments",
+  type: "GET",
+  url: actualUrlPrefix+ "instruments",
   // data: data,
   crossDomain : true,
   success: function(data){

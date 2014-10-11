@@ -9,28 +9,15 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>Counter Strike Trading System</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- MetisMenu CSS -->
-    <link href="css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
-
-    <!-- Timeline CSS -->
-    <link href="css/plugins/timeline.css" rel="stylesheet">
-
+    <link href='<?php echo base_url(). "css/bootstrap.min.css" ?>' rel="stylesheet" type="text/css" />
     <!-- Custom CSS -->
-    <link href="css/sb-admin-2.css" rel="stylesheet">
-
-    <!-- Morris Charts CSS -->
-    <link href="css/plugins/morris.css" rel="stylesheet">
-
+    <link href='<?php echo base_url(). "css/sb-admin-2.css" ?>' rel="stylesheet" type="text/css" />
     <!-- Custom Fonts -->
-    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -105,6 +92,12 @@
                         <div class="panel-heading">
                             <i class="fa fa-bar-chart-o fa-fw"></i> 
                             <h>Company Name</h>
+
+
+
+                            <div id="chartdiv" style="width : 100%; height  : 500px;"></div>
+
+
                         </div>
                         <!-- /.panel-heading -->
                         <div class="buyOrSell">
@@ -155,24 +148,16 @@
     </div>
     <!-- /#wrapper -->
 
-    <!-- jQuery Version 1.11.0 -->
-    <script src="js/jquery-1.11.0.js"></script>
-
+    <script src="<?= base_url() ?>js/jquery-2.1.1.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="js/plugins/metisMenu/metisMenu.min.js"></script>
-
-    <!-- Morris Charts JavaScript -->
-    <script src="js/plugins/morris/raphael.min.js"></script>
-    <script src="js/plugins/morris/morris.min.js"></script>
-    <script src="js/plugins/morris/morris-data.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/sb-admin-2.js"></script>
+    <script src="<?= base_url() ?>js/bootstrap.min.js"></script>
     <!-- Javascript for cs competition-->
-    <script src="js/cs-modification.js"></script>
+    <script src="<?= base_url() ?>js/cs-modification.js"></script>
+    <script src="<?= base_url() ?>js/amcharts.js"></script>
+    <script src="<?= base_url() ?>js/serial.js"></script>
+    <script src="<?= base_url() ?>js/none.js"></script>
+    <script src="<?= base_url() ?>js/amstock.js"></script>
+    <script src="<?= base_url() ?>js/stock_realtime.js"></script>
 </body>
 
 </html>

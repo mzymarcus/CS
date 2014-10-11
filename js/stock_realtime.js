@@ -2,6 +2,11 @@ var chart;
 var chartData = [];
 var chartCursor;
 
+var testingEnvironment = true;
+var urlPrefix = "http://128.199.213.71:9292/";
+var serverPrefix = "http://localhost/cs/member_area/"; 
+var actualUrlPrefix = (testingEnvironment ? serverPrefix : urlPrefix);
+
 // create chart
 AmCharts.ready(function() {
     // SERIAL CHART    
@@ -65,7 +70,7 @@ AmCharts.ready(function() {
         // chart.dataProvider.shift();
         $.ajax({
 	      type: "GET",
-		  url: "http://128.199.213.71:9292/instrument/0002.HK",
+		  url: actualUrlPrefix + "instrument/0002.HK",
 		  crossDomain : true,
 		  success: function(data){
 		  	var date = new Date();
