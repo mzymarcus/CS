@@ -1,6 +1,6 @@
 var username = "Marcus";
 var urlPrefix = "http://128.199.213.71:9292/";
-var serverPrefix = "http://localhost/cs/"; 
+var serverPrefix = "http://localhost/cs/index.php"; 
 var ric = "0002.HK";
 var quantity = 100;
 var brokerId = "cs";
