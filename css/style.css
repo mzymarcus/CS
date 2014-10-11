@@ -196,3 +196,7 @@ body {
 	padding: 15px;
 	height: 34px;
 }
+
+table: hover{
+	background-color: yellow;
+}
