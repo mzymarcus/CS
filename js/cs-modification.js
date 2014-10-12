@@ -186,8 +186,6 @@ function drawRealtime(selectedRIC, refresh){
 
 drawRealtime();
 
-
 $("#PortfolioInfo").click(function(){
   window.open("http://localhost/cs/index.php/member_area/");
 });
-

@@ -46,7 +46,7 @@ function checkMarcketPrice(option){
 
             var priceCompare = (option.isBuying) ? (response.livePrice <= option.price) : (response.livePrice >= option.price);
             if (priceCompare && !transactionDone){
-                doTransaction({ric: option.ric, quantity: option.quantity, brokerId: option.brokerId, type: option.type});
+                doTransaction(option);
             }
           },
         });
@@ -67,14 +67,15 @@ function doTransaction(data){
 };
 
 function updateDatabase(data){
-    $.ajax({
+    
+	$.ajax({
       type: "POST",
-      url: serverPrefix + "member_area/buy",
-      data: JSON.stringify(data),
+      url: serverPrefix+ "member_area/buy",
+      data: "sid=" + data.ric + "&price=" + data.price+ "&amount=" +data.quantity,
       crossDomain : true,
       success: function(data){
         console.log(data);
-        clearInterval(transactionInterval);
+       clearInterval(transactionInterval);
       },
     });
 };

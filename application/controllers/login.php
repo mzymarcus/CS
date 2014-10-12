@@ -33,6 +33,7 @@ class Login extends CI_Controller {
 				if($this->CI_auth->process_login($login_array))
 				{
 					//login successfull
+					$this->session->set_userdata('user_input1', $this->input->post('username'));
 					redirect(base_url().'index.php/member_area/');
 				}
 				else{

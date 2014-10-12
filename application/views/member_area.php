@@ -96,10 +96,18 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="buyOrSell">
-                            <row>
-                                    <button id ="buyButton">buy</button>
-                                    <button id ="sellButton">sell</button>
+                            <form>
+							<row>
+									Stock:
+									<input type="text" name="sid">
+									Price:
+									<input type="text" name="price">
+									Amount:
+									<input type="text" name="amount">
+                                    <input type="submit" id ="buyButton" name="bbuy" value="Buy" class="center"/>
+                                    <input type="submit" id ="sellButton" name="bsell" value="Sell" class="center"/>
                             </row>
+							</form>
                         </div>
                         <!-- /.buyOrSell -->
                         <div class="panel-body">
