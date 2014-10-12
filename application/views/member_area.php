@@ -114,10 +114,10 @@
                             <div class="row">
                                 <input type="text" id="search" placeholder="Search for Stock" style="width:400px">
                                     <table class="table table-bordered table-hover table-striped fixed" id="stockInfoHead" style="width:400px">
-                                        <col width="30px" />
+                                        <col width="40px" />
                                         <col width="80px" />
-                                        <col width="230px" />
-                                        <col width="60px" />
+                                        <col width="210px" />
+                                        <col width="70px" />
                                         <thead>
                                             <tr>
                                                 <th>#</th>
@@ -130,10 +130,10 @@
                                 <div style="width:400px;height:440px;overflow:scroll;">
                                     <div class="table-responsive">
                                         <table class="table table-bordered table-hover table-striped fixed" id="stockInfo" style="cursor: pointer">
-                                            <col width="30px" />
+                                            <col width="40px" />
                                             <col width="80px" />
-                                            <col width="230px" />
-                                            <col width="60px" />
+                                            <col width="210px" />
+                                            <col width="70px" />
                                         </table>
                                     </div>
                                 </div>

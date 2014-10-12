@@ -17,7 +17,7 @@ class Portfolio extends CI_Controller {
             $data['menu_top'] = $this->CI_menu->menu_top();
             $data['body'] = 'You are logged in MEMBER AREA <br/> <br/> <a href="'.base_url().'login/logout/"> Click here </ a> to logout';
             // $this->load->view('_output_html', $data);
-            $this->load->view('portfolio', $data);
+            $this->load->view('portfolio_page', $data);
         }
     }
     

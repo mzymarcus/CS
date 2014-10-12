@@ -40,16 +40,15 @@ $.ajax({
           var oldId = ($(this).attr('id'));
           var newId = oldId.replace("Num", "Ric");
           var comId = oldId.replace("Num", "Com");
-          console.log($("#"+newId).text());
+          //console.log($("#"+newId).text());
           $("#CompanyName").text($("#"+newId).text()+"    "+$("#"+comId).text());
-          // drawRealtime($("#"+newId).text(), true);        //PROBLEM HERE
-          drawRealtime("0006.HK",true);
-
+          drawRealtime($("#"+newId).text(),true);
       });
     }
   }          
 });
 //create table for the stock list
+
 
 //dynamic update the live price
 setInterval(function () {
@@ -64,10 +63,11 @@ setInterval(function () {
       // console.log(response[0]);
       // console.log(JSON.stringify(response[0]));
 
-
       for(var i=0; i<response.length; i++){
         var selectId="No"+ (i+1) ;
-        $('#'+selectId).text(Math.round(response[i].livePrice*100)/100)
+        $('#'+selectId).text(Math.round(response[i].livePrice*100)/100);
+        // console.log('#'+selectId+'updated'+Math.round(response[i].livePrice*100)/100);
+
       }
       //$('#No1').text(Math.round(response[0].livePrice*100)/100)
     }
