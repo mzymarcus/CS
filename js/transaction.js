@@ -10,13 +10,18 @@ var transactionDone;
 var testPrice = 6;
 
 $(document).ready(function() {
+
+
+    $("#transactionForm").submit(function(e) {
+        e.preventDefault();
+    });
+
     $("#buyButton").click( function() {
         // var price = document.getElementById("buyPrice").value;
         console.log("clicked");
         var price = testPrice;
         var ric = "0002.HK";
         var quantity = 100;
-
 
         checkMarcketPrice({price: price, ric: ric, isBuying: true, quantity: quantity, brokerId: brokerId, type: type});
     });
@@ -30,6 +35,11 @@ $(document).ready(function() {
 
         checkMarcketPrice({price: price, ric: ric, isBuying: true});
     });
+
+
+    setCurrentRic('0003.HK');
+    console.log(getCurrentRic());
+
 });
 
 function checkMarcketPrice(option){
@@ -60,8 +70,9 @@ function doTransaction(data){
       data: JSON.stringify(data),
       crossDomain : true,
       success: function(response){
-        console.log(response);
-        updateDatabase(data);
+        alert(response);
+        //updateDatabase(data);
+        clearInterval(transactionInterval);
       },
     });
 };

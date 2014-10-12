@@ -86,7 +86,7 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="buyOrSell">
-                            <form>
+                            <form id = "transactionForm">
 							<row>
 									Stock:
 									<input type="text" name="sid">
@@ -94,8 +94,8 @@
 									<input type="text" name="price">
 									Amount:
 									<input type="text" name="amount">
-                                    <input type="submit" id ="buyButton" name="bbuy" value="Buy" class="center"/>
-                                    <input type="submit" id ="sellButton" name="bsell" value="Sell" class="center"/>
+                                    <input type="submit" method="post" id ="buyButton" name="bbuy" value="Buy" class="center" onsubmit="return false;"/>
+                                    <input type="submit" method="post" id ="sellButton" name="bsell" value="Sell" class="center" onsubmit="return false;"/>
                             </row>
 							</form>
                         </div>
