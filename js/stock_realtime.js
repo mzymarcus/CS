@@ -12,3 +12,13 @@ function setCurrentRic(ric){
 function getCurrentRic(){
 	return $("#search").attr("placeholder");	
 }
+
+function getPrice(){
+	return $("input[name='price']").val();	
+}
+
+
+function getAmount(){
+	return $("input[name='amount']").val();
+}
+

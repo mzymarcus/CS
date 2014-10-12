@@ -25,8 +25,26 @@ class Member_area extends CI_Controller {
 			
 			$this->load->view('member_area', $data);
 			$this->load->model('record_model');
-			$this->record_model->ratio($uname);
+			
+			$ratio1=$this->record_model->ratio($uname);
+			if($ratio1['each']->num_rows()>0){
+				echo "#\r\n";
+				foreach($ratio1['each']->result() as $row){
+					echo "$row->S_Name\r\n";
+					echo "$row->S2\r\n";
+				}
+				echo "#\r\n";
 			}
+			$pair1=$this->record_model->each_stock($uname);
+			if($pair1['pair']->num_rows()>0){
+				echo "M\r\n";
+				foreach($pair1['pair']->result() as $row){
+					echo "$row->S_Name\r\n";
+					echo "$row->S1\r\n";
+				}
+				echo "M\r\n";
+			}
+		}
 	}
 	function buy(){
 		if($_POST["sid"]){
@@ -34,11 +52,11 @@ class Member_area extends CI_Controller {
 			$sdata=$this->input->post("sid");
 			$data['price']=$this->input->post("price");
 			$pdata=$this->input->post("price");
-			$data['amount']=0 - $this->input->post("amount");
-			$adata=0 - $this->input->post("amount");
-			echo "ld";
+			$data['amount']=$this->input->post("amount");
+			$adata=$this->input->post("amount");
 			
-			$cost=$data['amount'] * $data['price'];
+			$cost=0-$data['amount'] * $data['price'];
+			
 			$uname=$this->session->userdata('user_input1');				
 			$check_query1="SELECT `Allowance` FROM `users` WHERE `name`='$uname'";
 			$query1=$this->db->query($check_query1);
@@ -49,6 +67,9 @@ class Member_area extends CI_Controller {
 			$check_query3="INSERT INTO `record` (`U_Name`, `S_Name`, `Price`, `Quantity`, `Cost`) VALUES ('$uname', '$sdata', '$pdata', '$adata', '$cost')";
 			$query3=$this->db->query($check_query3);
 		}
+        else {
+            echo fail;
+        }
 	}
 	function sell(){
 		if($_POST["sid"]){
@@ -93,4 +114,6 @@ class Member_area extends CI_Controller {
         $arr = array("ric" => "0002.HK", "name" => "CHEUNG KONG HOLDINGS LTD", "closePrice" => 135.2, "livePrice" => rand(5, 15));    
         echo json_encode( $arr );
     }
+
+    
 }
