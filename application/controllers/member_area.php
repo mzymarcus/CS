@@ -93,6 +93,4 @@ class Member_area extends CI_Controller {
         $arr = array("ric" => "0002.HK", "name" => "CHEUNG KONG HOLDINGS LTD", "closePrice" => 135.2, "livePrice" => rand(5, 15));    
         echo json_encode( $arr );
     }
-
-    
 }
