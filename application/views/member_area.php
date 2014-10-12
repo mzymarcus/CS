@@ -54,18 +54,8 @@
                                 <th>Shares</th>
                                 <th>Earning</th>
                             </tr>
-                            <tr>
-                                <th>1</th>
-                                <th>123</th>
-                                <th>100</th> 
-                                <th>+5.00</th>
-                            </tr>
-                            <tr>
-                                <th>2</th>
-                                <th>123</th>
-                                <th>100</th> 
-                                <th>+5.00</th>
-                            </tr>
+                            <tr id="StockAtHandSecondLine">
+                                
                         </tbody>
                     </table> 
 

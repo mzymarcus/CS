@@ -3,7 +3,7 @@ var chartData = [];
 var chartCursor;
 
 
-var testingEnvironment = true;
+var testingEnvironment = false;
 var urlPrefix = "http://128.199.213.71:9292/";
 var serverPrefix = "http://localhost/cs/index.php/member_area/"; 
 var actualUrlPrefix = (testingEnvironment ? serverPrefix : urlPrefix);
@@ -47,10 +47,7 @@ $.ajax({
 
       });
     }
-  }
-
-
-          
+  }          
 });
 //create table for the stock list
 
@@ -189,3 +186,31 @@ drawRealtime();
 $("#PortfolioInfo").click(function(){
   window.open("http://localhost/cs/index.php/member_area/");
 });
+
+
+//create currentStock table
+$.ajax({
+  type: "GET",
+  url: actualUrlPrefix+ "instruments",
+  // data: data,
+  crossDomain : true,
+  success: function(data){
+    var response = $.parseJSON(data);
+    // console.log(response);
+    // console.log(response[0]);
+    // console.log(JSON.stringify(response[0]));
+
+    for(var i=0; i<response.length; i++) {
+      var selectIdRow= "<tr id=currentStockNum"+ (i+1) + ">";
+      var str=selectIdRow+      
+                "<td>"+(i+1)+"</td>"+
+                "<td>"+(i+1)+"</td>"+
+                // "<td id='currentStockRic"+(i+1)+"'>"+response[i].ric+"</td>"+
+                // "<td id='currentStockCom"+(i+1)+"'>"+response[i].name+"</td>"+
+              "</tr>";
+
+      $("#StockAtHandSecondLine").append(str);
+    }
+  }          
+});
+//create currentStock table
