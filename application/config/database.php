@@ -49,8 +49,8 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'tony';
-$db['default']['password'] = 'tony';
+$db['default']['username'] = 'root';
+$db['default']['password'] = 'root';
 $db['default']['database'] = 'ci_reg';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
@@ -66,3 +66,4 @@ $db['default']['stricton'] = FALSE;
 
 
 /* End of file database.php */
+/* Location: ./application/config/database.php */

@@ -69,3 +69,10 @@ INSERT INTO `users` (`ID`, `name`, `email`, `username`, `password`, `country`, `
 (1, 'Masud Alam', 'masud.eden@gmail.com', 'masud', 'a1a49620be20ec0f01eac6f94d29819a1f646ef3', 'Bangladesh', 'Dhaka,Bangladesh', 'Female', '&q8HAd4!'),
 (2, 'Sumon', 'sumon@gmail.com', 'sumon', 'e79fba7e5e9197042dd66a561dd4e6427d497da9', 'Bangladesh', 'Dhaka', 'Female', ',sSjDT=!'),
 (3, 'Sohel Alam', 'sohel@gmail.com', 'sohel', '66d5dc9bbd21e92ca3aa6432b03bb5aa7546dae1', 'Bangladesh', 'Dhaka', 'Female', 'kjQtupZP');
+
+CREATE TABLE `record`(
+`U_Name` VARCHAR(255),
+`S_Name` VARCHAR(255),
+`Price` DOUBLE,
+`Quantity` INT,
+`Cost` DOUBLE);

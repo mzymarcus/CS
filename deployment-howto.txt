@@ -1,0 +1,7 @@
+1. Download and install Mamp (http://localhost/MAMP/?language=English)
+2. Setup Mamp by clicking preferences/ports. Click on the button “Set Web & MySQL ports to 80 & 3306”. And click OK.
+3. Click Open start page.
+4. Go to Tools/phpMyAdmin. Create database “ci_reg” under collation “utf8_general_ci”.
+5. Click on database ci_reg. Run the SQLs as stored in “ci_reg.sql” 
+6. Open Chrome. Go to “http://localhost/cs/index.php”.
+7. The Portfolio page is at “http://localhost/cs/index.php/portfolio”

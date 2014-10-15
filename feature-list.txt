@@ -1,0 +1,7 @@
+1. Display the market data
+2. Display the universe of the instruments
+3. Place order
+4. Display personal stock ownership and profit status
+5. Portfolio Analysis
+6. Social footprint (Twitter Timeline #finance) feed
+7. News feed
