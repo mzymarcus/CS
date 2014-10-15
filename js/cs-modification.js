@@ -199,6 +199,7 @@ $.ajax({
     // console.log(response);
     // console.log(response[0]);
     // console.log(JSON.stringify(response[0]));
+
     for(var i=0; i<response.length; i++) {
       var selectIdRow= "<tr id=currentStockNum"+ (i+1) + ">";
       var str=selectIdRow+      
