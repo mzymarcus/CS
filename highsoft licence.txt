@@ -1,0 +1,3 @@
+License for high chart & high stock:
+
+Do you want to use Highstock for a personal website, a school site or a non-profit organisation? Then you don't need the author's permission, just go on and use Highstock. For commercial websites and projects, see License and Pricing at http://shop.highsoft.com/. 
